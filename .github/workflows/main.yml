@@ -21,7 +21,7 @@ jobs:
 
     - name: Fetch JAR file
       run: |
-        mkdir -p ./artifacts
+        mkdir -p ${{ github.workspace }}/artifacts
         cp target/jwt-auth-service-1.0.0.jar ${{ github.workspace }}/artifacts
 
   transfer:
@@ -35,4 +35,4 @@ jobs:
     - name: Transfer JAR file
       run: |
         mkdir -p target
-        cp ./artifacts/jwt-auth-service-1.0.0.jar target/
+        cp ${{ github.workspace }}/artifacts/jwt-auth-service-1.0.0.jar target/
