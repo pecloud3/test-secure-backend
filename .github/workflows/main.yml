@@ -17,4 +17,4 @@ jobs:
         distribution: 'temurin'
 
     - name: Build and package
-      run: mvnw clean package spring-boot:repackage
+      run: ./mvnw clean package spring-boot:repackage
